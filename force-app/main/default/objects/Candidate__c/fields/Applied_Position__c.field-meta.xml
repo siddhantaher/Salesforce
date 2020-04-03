@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applied_Position__c</fullName>
+    <externalId>false</externalId>
+    <label>Applied Position</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+                <label>Analyst</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Solution Architect</fullName>
+                <default>false</default>
+                <label>Solution Architect</label>
+            </value>
+            <value>
+                <fullName>Solution Principal</fullName>
+                <default>false</default>
+                <label>Solution Principal</label>
+            </value>
+            <value>
+                <fullName>Principal Consultant</fullName>
+                <default>false</default>
+                <label>Principal Consultant</label>
+            </value>
+            <value>
+                <fullName>Consultant Manager</fullName>
+                <default>false</default>
+                <label>Consultant Manager</label>
+            </value>
+            <value>
+                <fullName>Client Service Lead</fullName>
+                <default>false</default>
+                <label>Client Service Lead</label>
+            </value>
+            <value>
+                <fullName>Practice Area Lead</fullName>
+                <default>false</default>
+                <label>Practice Area Lead</label>
+            </value>
+            <value>
+                <fullName>Client Service Partner</fullName>
+                <default>false</default>
+                <label>Client Service Partner</label>
+            </value>
+            <value>
+                <fullName>Practice Area Director</fullName>
+                <default>false</default>
+                <label>Practice Area Director</label>
+            </value>
+            <value>
+                <fullName>Managing Director</fullName>
+                <default>false</default>
+                <label>Managing Director</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
