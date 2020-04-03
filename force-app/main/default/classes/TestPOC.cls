@@ -4,14 +4,13 @@ public with sharing class TestPOC {
         Candidate__c candy = newInsertedCandidateList[0];
         //Candidate__c candy = [SELECT Name, Interview_Time__c, Applied_Position__c, Practice__c FROM Candidate__c WHERE Name = 'GoGo' LIMIT 1];
         List<Event> userEvents = [Select Description, StartDateTime, EndDateTime, ActivityDateTime, Location, IsAllDayEvent, OwnerId FROM Event WHERE OwnerId ='0053h000001dTtBAAU' ];
-        User user = [SELECT Name, Id FROM User WHERE Id = '0053h000001dTtBAAU'];
 
         For(Event eve : userEvents){
             if(eve.StartDateTime == candy.Interview_Time__c){
                 System.debug('XXXXXCandidate interview time' + candy.Interview_Time__c);
                 System.debug('XXXXXevent time' + eve.StartDateTime);
                 System.debug('There is a match with the interviewer');
-                sendEmail(eve, candy);
+                sendEmail(eve);
                 
             }
             else{
@@ -23,7 +22,7 @@ public with sharing class TestPOC {
         
     }
 
-    public static void sendEmail(Event eve, Candidate__c candidate, User us) {
+    public static void sendEmail(Event eve) {
 
         //Creating an email for the lead 
         Messaging.SingleEmailMessage[] mails = new Messaging.SingleEmailMessage[0];
@@ -36,7 +35,7 @@ public with sharing class TestPOC {
         //                      ld.CreatedDate + ' and has not been converted.' + '\n' + 'Feel free to access this record from the link below and update it accordingly:' + 
         //                      '\n' + 'Link: '+ URL.getSalesforceBaseUrl().toExternalForm()+ '/'+ld.Id + '\n' + 'Best Regards,'
         //                      + '\n' + 'Salesforce Automation');
-        mail.setPlainTextBody('Hey ' + );
+        mail.setPlainTextBody('This is the email of the text');
         mails.add(mail);
         Messaging.sendEmail(mails);
         
