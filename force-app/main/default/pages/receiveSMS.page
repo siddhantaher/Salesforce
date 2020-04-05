@@ -1,0 +1,8 @@
+<!--
+    Name  : receiveSMS
+    Developer Name : Parantap Srivastav
+    Description : This is a POC vf page to act as a endpoint url receiving texts from Twilio. The controller for this page is the apex rest resource.   
+-->
+
+<apex:page controller="receiveSMS">
+</apex:page>
