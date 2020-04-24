@@ -2,7 +2,14 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/processForm": [
+                "processForm/processForm.js"
+            ],
+            "c/fileUploader": [
+                "fileUploader/fileUploader.js"
+            ]
+        }
     },
     "include": [
         "**/*",
