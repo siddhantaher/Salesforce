@@ -1,8 +1,11 @@
 public with sharing class ImageUploaderController {
     @AuraEnabled
-    public static String uploadPicture(String recId, String objectName){
+    public static String uploadPicture(String recId){
         
-        System.Debug('This is the object name from the LWC component and the rec ID' + objectName + ' ' + recId);
+        System.Debug('This is the rec ID from the LWC component :  ' + recId);
+        Id sId = Id.valueOf(recId);
+        String objectName = sId.getSObjectType().getDescribe().getName();
+        System.debug(objectName);
 
         //in lightning, docs are stored in content documents
         ContentDocumentLink docLink= [SELECT ContentDocumentId
